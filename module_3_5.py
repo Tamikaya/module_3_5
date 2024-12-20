@@ -6,7 +6,7 @@ def get_multiplied_digits(number):
  # умножите первую цифру числа на результат работы этой же функции с числом, но уже без первой цифры.
         return first * get_multiplied_digits(int(str_number[1:]))
     else:
-        return int(str_number)
+        return int(str_number) if int(str_number) != 0 else 1
 
 
 result = get_multiplied_digits(40203)
